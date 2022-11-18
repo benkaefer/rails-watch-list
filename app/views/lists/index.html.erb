@@ -2,9 +2,13 @@
 
 <ul>
   <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list.id) %></li>
+    <li><%= link_to list.name, list_path(list.id) %>
+    <div>
+      <% if list.photo.attached? %>
+        <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
+    </div>
+    </li>
   <% end %>
 </ul>
 <p> <%=link_to "add a new list", new_list_path %></p>
-
-#has to display the new image uploaded by user in new.html.erb

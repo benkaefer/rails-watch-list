@@ -75,3 +75,5 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 
 gem "dotenv-rails", groups: [:development, :test]
+
+gem "cloudinary"
